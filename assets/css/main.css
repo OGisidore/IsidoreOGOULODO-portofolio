@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url(aharoni/aharoni/ahronbd.ttf);
+@font-face {
+    font-family: "Aharoni"
+    ;
+    src: url(aharoni/aharoni/ahronbd.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Alata";
+    src: url(Alata/Alata-Regular.ttf) format("truetype");
+}
+:root {
+  --Bold: bold;
+  --Aharoni: "Aharoni", sans-serif;
+  --Alata: "Alata", sans-serif;
+  --Text-white: rgba(232, 232, 232, 1);
+  --Text-Gray: rgba(87, 87, 87, 1);
+  --Accent-Purple: rgba(93, 57, 116, 1);
+  --Button-Background: rgba(64, 33, 102, 1);
+  --Main-Background: rgba(34, 26, 55, 1);
+  --Button-Background-Hover: rgba(30, 0, 66, 1);
+  --Logo-Font: var(--Alata);
+  --Logo-Size: 27px;
+  --NavLink-Font: var(--Alata);
+  --NavLink-Size: 12px;
+  --PageTitle-Font: var(--Aharoni);
+  --PageTitle-Weigth: var(--Bold);
+  --PageTitle-Size: 52px;
+  --Paragraph-Font: var(--Aharoni);
+  --Paragraph-Weigth: var(--Bold);
+  --Paragraph-Size: 14px;
+  --Paragraph-LineHeigth: 158%;
+  --SupTitle-Font: var(--Aharoni);
+  --SupTitle-size: 20px;
+  --SupTitle-Weigth: var(--Bold);
+  --SubTitle-Font: var(--Aharoni);
+  --SubTitle-size: 14px;
+  --SubTitle-Weigth: var(--Bold);
+  --MiniTitle-Font: var(--Aharoni);
+  --MiniTitle-size: 12px;
+  --MiniTitle-Weigth: var(--Bold);
+  --MiniTitle-LineHeigth: 158%;
+}
+
+.supTitle {
+    font-size: var(--SupTitle-size);
+    font-family: var(--SupTitle-Font);
+    font-weight: var(--SupTitle-Weigth);
+    color: var(--Accent-Purple);
+  }
+
+  .pageTitle {
+    margin: 0;
+    /* font-family: var(--PageTitle-Font); */
+    font-size: var(--PageTitle-Size);
+    font-family: var(--PageTitle-Font);
+    font-weight: var(--PageTitle-Weigth);
+  }
+
+  .subTitle {
+    margin: 0;
+    font-size: var(--SubTitle-size);
+    color: var(--Text-Gray);
+    font-family: var(--SubTitle-Font);
+    font-weight: var(--SubTitle-Weigth);
+  }
+
+  .paragraphs {
+    margin-top: 3rem;
+    font-family: var(--Paragraph-Font);
+    line-height: var(--Paragraph-LineHeigth);
+    font-weight: var(--Paragraph-Weigth);
+  }
+  .MiniTitle{
+    line-height: var(--MiniTitle-LineHeigth);
+    font-weight: var(--MiniTitle-Weigth);
+    font-size: var(--MiniTitle-size);
+    font-family: var(--MiniTitle-Font)  ;
+  }
+
+html {
+  margin: 0;
+  padding: 0;
+
+  body {
+    color: var(--Text-white);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: var(--Alata);
+    font-size: var(--Paragraph-Size);
+    height: 100vh;
+    background-color: #000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main {
+      border-radius: 3rem;
+      width: 98vw;
+      margin: 0;
+      padding: 0;
+      height: 94vh;
+      overflow: scroll;
+      position: relative !important;
+      background-color: var(--Main-Background);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content {
+        width: 90%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header {
+          background-color: var(--Main-Background);
+          width: 100%;
+          height: 6rem;
+          position: sticky;
+          top: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .headerContent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            .logo {
+              text-transform: uppercase;
+              font-size: var(--Logo-Size);
+              font-family: var(--Logo-Font);
+              z-index: 1;
+            }
+
+            .navLink {
+              font-size: var(--NavLink-Size);
+              font-family: var(--NavLink-Font);
+              font-weight: bold;
+
+              ul {
+                display: flex;
+                list-style: none;
+                gap: 2rem;
+
+                .nav {
+                  li {
+                    cursor: pointer !important;
+                  }
+                  display: flex;
+                  background-color: var(--Main-Background);
+                }
+
+                li {
+                  cursor: pointer;
+                  padding: 0.7rem 2rem;
+                  border-radius: 1.3rem;
+
+                  &:hover {
+                    background-color: var(--Button-Background-Hover);
+                  }
+
+                  a {
+                    color: var(--Text-white);
+                    text-decoration: none;
+                  }
+
+                  &.contact {
+                    z-index: 1;
+                    background-color: var(--Button-Background);
+                  }
+                }
+              }
+            }
+          }
+        }
+        .about,
+        .resume{
+            padding: 2rem;
+            max-width: 31rem;
+            align-self: self-end;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 5rem;
+  
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 823px) {
+    html{
+        font-size: 70% !important;
+    }
+    .main {
+      .content {
+        width: 100% !important;
+        .header {
+          height: 5rem;
+          position: relative;
+          .navLink {
+            .nav {
+              padding: 5rem 0 1rem !important;
+              position: absolute;
+              bottom: -10%;
+              left: 1.5% !important;
+              gap: 1rem !important;
+              width: 97% !important;
+              justify-content: space-evenly;
+              li {
+                padding: 0 1rem 0 0 !important;
+              }
+            }
+            li.contact {
+              padding: 0.5rem 1rem !important;
+            }
+          }
+        }
+        .about,
+        .resume {
+            align-self: center !important;
+            max-width: 97% !important;
+            margin: 0 !important;
+          }
+    }
+}
+}

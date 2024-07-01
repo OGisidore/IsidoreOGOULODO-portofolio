@@ -1,0 +1,267 @@
+@import url(main.css);
+html {
+  
+  body {
+    .main {
+      .content {
+        .UI-component {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2rem;
+          .title {
+            font-size: var(--PageTitle-Size);
+          }
+          .contentUi {
+            margin-top: 2rem;
+            max-width: 60rem;
+            display: flex;
+
+            gap: 2rem;
+            .steps {
+              max-width: 50%;
+              .step {
+                height: 2rem;
+                pointer-events: visible !important;
+                cursor: pointer !important;
+                overflow: hidden;
+                padding: 1rem;
+                margin-top: 0.1rem;
+                background-color: var(--Main-Background);
+                border-radius: 0.3rem;
+                transition: height 1ms;
+                .IllustrationStep {
+                  display: none;
+                }
+                &.active {
+                  height: 10rem;
+                  /* overflow: visible; */
+                  box-shadow: 0rem 0rem 0.1rem 0.2rem var(--Text-white);
+                  background-color: var(--Button-Background-Hover);
+                  .description {
+                    display: block !important;
+                    height: auto !important;
+                  }
+                  .progressBarContainer {
+                    display: block !important;
+                  }
+                }
+                .visible {
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  .icon {
+                    font-size: 1rem;
+                    background-color: var(--Text-white);
+                    color: var(--Accent-Purple);
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 4rem;
+                    padding: 0.6rem 1rem;
+                  }
+                  .article {
+                    font-size: 2rem;
+                  }
+                }
+                .progressBarContainer {
+                  /* display: none; */
+                  padding-top: 1rem;
+                  width: 100%;
+                  .progressBar {
+                    height: 0.3rem;
+                    width: 0;
+                    background-color: aliceblue;
+                  }
+                }
+                .description {
+                  /* display: none; */
+                  /* height: 0; */
+                  padding: 0.5rem;
+                }
+              }
+            }
+            .Illustration {
+              /* border:  .1rem solid; */
+              display: flex;
+              align-items: center;
+              min-width: 50% !important;
+              video {
+                max-height: 25rem;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .testimonys {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 70vh;
+          width: 98%;
+          /* overflow: scroll; */
+          h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+          }
+          .witnesses {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            .witness {
+              max-width: 15rem;
+              color: #000;
+              padding: 1rem;
+              border-radius: 0.3rem;
+              background-color: var(--Text-white);
+              .witnessProfil {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                img {
+                  max-width: 3rem;
+                }
+                .name {
+                  p {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    margin: 0;
+                  }
+                  span {
+                    font-weight: bold;
+                    color: var(--Text-Gray);
+                  }
+                }
+              }
+              .message {
+                padding-top: 2rem;
+              }
+              .time {
+                padding-top: 1rem;
+                display: flex;
+                font-size: 0.9rem;
+                color: var(--Text-Gray);
+                gap: 0.2rem;
+                align-items: center;
+                .dot {
+                  width: 3px;
+                  height: 3px;
+                  border-radius: 3rem;
+                  background-color: #000;
+                }
+                .app {
+                  font-weight: bold;
+                  color: blue;
+                }
+              }
+              .reaction {
+                padding-top: 1rem;
+                font-size: 0.7rem;
+                display: flex;
+                gap: 1rem;
+              }
+            }
+          }
+          .controls {
+            margin-top: 3rem;
+            display: flex;
+            gap: 2rem;
+            pointer-events: visible !important;
+            div {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 3rem;
+              cursor: pointer;
+              background-color: var(--Accent-Purple);
+            }
+          }
+        }
+        .Bar {
+          width: 100%;
+          height: 0.2rem;
+          background-color: aliceblue;
+        }
+
+        .socialsBox {
+          width: 96%;
+          padding-bottom: 2rem;
+          h3 {
+            font-size: 2rem;
+          }
+          .socials {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            img {
+              width: 2rem;
+              height: 2rem;
+            }
+            .contact {
+              background-color: var(--Button-Background);
+              padding: 0.4rem 1rem;
+            }
+          }
+        }
+      }
+
+     
+    }
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .main {
+    .content {
+      
+      .UI-component {
+        width: 95% !important;
+        .contentUi {
+          display: block !important;
+          .steps {
+            max-width: 100% !important;
+            .step {
+              &.active {
+                height: 29rem !important;
+                .IllustrationStep {
+                  display: block !important;
+                  video {
+                    max-height: 20rem !important;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+          .Illustration {
+            display: none !important;
+          }
+        }
+      }
+      .testimonys {
+        width: 100vw;
+        padding: 1rem 0;
+        /* overflow: scroll; */
+        .witnesses {
+          max-width: 98% !important;
+          overflow: scroll;
+          justify-content: start !important;
+          gap: 0.4rem !important;
+          .witness {
+            min-width: 15rem !important;
+          }
+          /* display: block !important; */
+        }
+        .controls {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
