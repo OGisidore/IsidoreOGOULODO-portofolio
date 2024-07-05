@@ -177,9 +177,10 @@ html {
           }
         }
         .about,
+        .gallery,
         .resume{
             padding: 2rem;
-            max-width: 31rem;
+            width: 50%;
             align-self: self-end;
             min-height: 70vh;
             display: flex;
@@ -198,7 +199,9 @@ html {
         font-size: 70% !important;
     }
     .main {
+      user-select: none !important;
       .content {
+        
         width: 100% !important;
         .header {
           height: 5rem;
@@ -222,9 +225,11 @@ html {
           }
         }
         .about,
+        .gallery,
         .resume {
             align-self: center !important;
-            max-width: 97% !important;
+            width: 95% !important;
+            padding: 0 !important;
             margin: 0 !important;
           }
     }

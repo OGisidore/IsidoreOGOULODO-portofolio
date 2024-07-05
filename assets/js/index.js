@@ -1,11 +1,18 @@
-import {  stepItems, witnesses } from "./data.js";
+import { getAllData } from "./api.js";
+import { witnesses } from "./data.js";
+import { loadFiles } from "./firestore.js";
 
 var video = document.getElementById("Vid-illu");
 const next = document.querySelector(".next");
 const previous = document.querySelector(".previous");
 let itemPerPage = 2;
+let videUre;
 let currentIndex = 1;
-
+const vid = loadFiles()
+vid.forEach((vd)=>{
+  console.log(vd);
+})
+console.log(videUre);
 const steps = document.querySelector(".steps");
 
 window.onload = () => {
@@ -13,9 +20,10 @@ window.onload = () => {
   
   steps.innerHTML = "";
 
+  
   // step display fn
   console.time("bloc d'execution de la fonction disolay")
-      const displayStep = () => {
+      const displayStep = (stepItems) => {
     stepItems.map((item) => {
       steps.innerHTML += `
             <div class="step" data-id="${item._id}">
@@ -34,7 +42,7 @@ window.onload = () => {
                  <div class="IllustrationStep">
               <video
                 id="Vid-illu"
-                src=${item.videoUrls}
+                src=${vid}
                 muted
                 autoplay
                     ></video>
@@ -44,7 +52,6 @@ window.onload = () => {
             console.log("super");
     });
        };
-      displayStep();
       // console.log(displayStep());
   console.timeEnd("bloc d'execution")
 
@@ -52,7 +59,7 @@ window.onload = () => {
   const stepsDiv = document.querySelectorAll(".step");
 
   // illustr video display
-  const displayVideo = (curentStep) => {
+  const displayVideo = (curentStep, stepItems) => {
     stepsDiv.forEach((step) => {
       if (step.dataset.id === curentStep.toString()) {
         step.classList.add("active");
@@ -98,7 +105,16 @@ window.onload = () => {
       displayVideo(curentStep);
     };
   });
-  displayVideo(curentStep);
+  
+
+  const load = async ()=>{
+    const dataSKills = await getAllData("Steps")
+    console.log(dataSKills);
+    displayStep(dataSKills)
+    displayVideo(curentStep,dataSKills);
+  
+  }
+  load()
 
   // witness display
   const displayWitnesses = () => {
@@ -156,6 +172,6 @@ window.onload = () => {
     displayWitnesses();
   };
 
-console.clear()
+// console.clear()
              
 }
