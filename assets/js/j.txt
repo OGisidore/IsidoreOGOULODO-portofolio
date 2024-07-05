@@ -327,3 +327,7 @@ ChatGPT peut faire des erreurs. Envisagez de vérifier les informations importan
                   status : ${skill.status}
                 </div>
               </div>
+
+              https://ogisidore.github.io/mudeyBreads/#breads
+              https://ogisidore.github.io/rock-paper-scissors-game/
+              https://ogisidore.github.io/todo/
