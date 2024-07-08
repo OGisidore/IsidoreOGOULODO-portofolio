@@ -1,29 +1,29 @@
-import { getAllData } from "./api.js";
-import { witnesses } from "./data.js";
-import { loadFiles } from "./firestore.js";
+// import { getAllData } from "./api.js";
+import { stepItems, witnesses } from "./data.js";
+import {  displayHeader } from "./geneics.js";
+// import { loadFiles } from "./firestore.js";
 
 var video = document.getElementById("Vid-illu");
 const next = document.querySelector(".next");
 const previous = document.querySelector(".previous");
 let itemPerPage = 2;
-let videUre;
+// let videUre;
 let currentIndex = 1;
-const vid = loadFiles()
-vid.forEach((vd)=>{
-  console.log(vd);
-})
-console.log(videUre);
+// const vid = loadFiles()
+// vid.forEach((vd)=>{
+//   console.log(vd);
+// })
 const steps = document.querySelector(".steps");
 
 window.onload = () => {
+  displayHeader()
 
   
   steps.innerHTML = "";
 
   
   // step display fn
-  console.time("bloc d'execution de la fonction disolay")
-      const displayStep = (stepItems) => {
+      const displayStep = () => {
     stepItems.map((item) => {
       steps.innerHTML += `
             <div class="step" data-id="${item._id}">
@@ -42,7 +42,7 @@ window.onload = () => {
                  <div class="IllustrationStep">
               <video
                 id="Vid-illu"
-                src=${vid}
+                src=${item.videoUrls}
                 muted
                 autoplay
                     ></video>
@@ -52,14 +52,12 @@ window.onload = () => {
             console.log("super");
     });
        };
-      // console.log(displayStep());
-  console.timeEnd("bloc d'execution")
-
+displayStep()
   let curentStep = 0;
   const stepsDiv = document.querySelectorAll(".step");
 
   // illustr video display
-  const displayVideo = (curentStep, stepItems) => {
+  const displayVideo = (curentStep) => {
     stepsDiv.forEach((step) => {
       if (step.dataset.id === curentStep.toString()) {
         step.classList.add("active");
@@ -93,6 +91,8 @@ window.onload = () => {
       displayVideo(curentStep);
     };
   };
+  displayVideo(curentStep)
+  
 
   // event on step change by user
   stepsDiv.forEach((step) => {
@@ -107,14 +107,14 @@ window.onload = () => {
   });
   
 
-  const load = async ()=>{
-    const dataSKills = await getAllData("Steps")
-    console.log(dataSKills);
-    displayStep(dataSKills)
-    displayVideo(curentStep,dataSKills);
+  // const load = async ()=>{
+  //   const dataSKills = await getAllData("Steps")
+  //   console.log(dataSKills);
+  //   displayStep(dataSKills)
+  //   displayVideo(curentStep,dataSKills);
   
-  }
-  load()
+  // }
+  // load()
 
   // witness display
   const displayWitnesses = () => {

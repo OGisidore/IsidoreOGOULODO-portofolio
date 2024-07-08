@@ -331,3 +331,25 @@ ChatGPT peut faire des erreurs. Envisagez de vérifier les informations importan
               https://ogisidore.github.io/mudeyBreads/#breads
               https://ogisidore.github.io/rock-paper-scissors-game/
               https://ogisidore.github.io/todo/
+
+
+<div class="headerContent">
+            <div class="logo">Isidore O.</div>
+            <div class="navLink">
+              <ul>
+                <div class="nav">
+                  <li class=""><a href="#about">About</a></li>
+                  <li class=""><a href="/Resume.html"> Resume</a></li>
+                  <li class="galleryofProjects">
+                    <a href="/Gallery.html">Gallery</a>
+                  </li>
+                  <li class="certificate">
+                    <!-- <a href="http://" target="_blank" rel="noopener noreferrer"></a> -->
+                    <a href="/Certificate.html">Certificate</a>
+                  </li>
+                </div>
+
+                <li id="contact">Contact</li>
+              </ul>
+            </div>
+          </div>

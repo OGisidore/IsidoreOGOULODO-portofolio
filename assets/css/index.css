@@ -203,8 +203,9 @@ html {
               width: 2rem;
               height: 2rem;
             }
-            .contact {
+            #contact {
               background-color: var(--Button-Background);
+              cursor: pointer;
               padding: 0.4rem 1rem;
             }
           }

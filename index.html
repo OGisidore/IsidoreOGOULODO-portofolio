@@ -20,33 +20,63 @@
     <link rel="canonical" href="">
     <title>OGOULODO Isidore : web developper</title>
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
   </head>
   <body>
     <div class="main">
       <div class="content">
+
+        <div class="contactForm">
+          <!-- <div class="contact active">
+            <h4 class="pageTitle">Contactez moi</h4>
+            <form>
+              <div class="name">
+                  <label for="name"> Full name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Entrer votre nom"
+                />
+              </div>
+              <div class="email">
+                <label for="email"> De </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email : exemple@service.com"
+                />
+              </div>
+              <div class="Object">
+                <input
+                  type="text"
+                  name="object"
+                  id="object"
+                  placeholder="Objet"
+                />
+              </div>
+            </form>
+            <div class="toolbar">
+              <button onclick="execCmd('bold')"><b>B</b></button>
+              <button onclick="execCmd('underline')"><u>u</u></button>
+              <button onclick="execCmd('italic')"><i>i</i></button>
+              <button class="color" onclick="execCmd('foreColor', 'red')">A</button>
+              <button class="color" onclick="execCmd('foreColor', 'Blue')">A</button>
+              <button class="color" onclick="execCmd('foreColor', 'orange')">A</button>
+  
+            </div>
+            <div class="editor" contenteditable="true"  >Salut isidore ... </div>
+            <div class="actions">
+              <button class="return">Return</button>
+            <button class="send"> Send </button>
+            </div>
+          
+          </div> -->
+        </div>
         <!-- header -->
         <div class="header">
-          <div class="headerContent">
-            <div class="logo">Isidore O.</div>
-            <div class="navLink">
-              <ul>
-                <div class="nav">
-                  <li class=""><a href="#about">About</a></li>
-                  <li class=""><a href="/Resume.html"> Resume</a></li>
-                  <li class="galleryofProjects">
-                    <a href="/Gallery.html">Gallery</a>
-                  </li>
-                  <li class="certificate">
-                    
-                    <!-- <a href="http://" target="_blank" rel="noopener noreferrer"></a> -->
-                    <a href="/Certificate.html">Certificate</a>
-                  </li>
-                </div>
-
-                <li class="contact"><a href="#Contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
+         
         </div>
         <!-- about -->
         <div class="about" id="About">
@@ -157,9 +187,13 @@
               </a>
             </div>
             <div class="LinkIdin"></div>
-            <div class="contact">contact</div>
+            <div id="contact">contact</div>
           </div>
         </div>
+      </div>
+      <div class="contactForm">
+        
+        
       </div>
        
         <!-- <button class="animated-button"><img src="assets/images/skills/z.svg" alt=""></button> -->
@@ -168,6 +202,10 @@
     <script type="module">
      
     </script>
-    <script type="module" src="assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<script type="module" src="assets/js/index.js"></script>
+<script>
+  
+</script>
   </body>
 </html>

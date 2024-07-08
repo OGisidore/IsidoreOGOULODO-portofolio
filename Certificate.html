@@ -26,7 +26,7 @@
                   </li>
                 </div>
 
-                <li class="contact"><a href="#Contact">Contact</a></li>
+                <li id="contact">Contact</li>
               </ul>
             </div>
           </div>
@@ -65,15 +65,23 @@
             <button onclick="execCmd('bold')"><b>B</b></button>
             <button onclick="execCmd('underline')"><u>u</u></button>
             <button onclick="execCmd('italic')"><i>i</i></button>
-            <button onclick="execCmd('foreColor', 'red')">color</button>
+            <button class="color" onclick="execCmd('foreColor', 'red')">A</button>
+            <button class="color" onclick="execCmd('foreColor', 'Blue')">A</button>
+            <button class="color" onclick="execCmd('foreColor', 'orange')">A</button>
+
           </div>
           <div class="editor" contenteditable="true"  >Salut isidore ... </div>
-          <button class="Change"> save </button>
+          <div class="actions">
+            <button class="return">Return</button>
+          <button class="send"> Send </button>
+          </div>
+        
         </div>
       </div>
     </div>
     <script>
         const execCmd=(Command,value=null)=>{
+
             document.execCommand(Command,false,value)
         }
         document.querySelector(".Change").onclick = ()=>{

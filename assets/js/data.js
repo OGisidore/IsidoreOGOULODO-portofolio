@@ -1,37 +1,36 @@
-import { getAllData } from "./api.js";
-import { loadFiles } from "./firestore.js";
+
 import { generateID } from "./utilities.js";
 
-// export const stepItems = [
-//   {
-//     _id: 0,
-//     title: "Développement web",
-//     description:
-//       "Plongez dans mon monde où chaque ligne de code devient une symphonie numérique. Du front-end au back-end, je façonne des expériences web fluides et innovantes.",
-//     videoUrls: "assets/videos/step1.webm",
-//   },
-//   {
-//     _id: 1,
-//     title: "Design web",
-//     description:
-//       "Explorez mes créations où le design rencontre la fonctionnalité. Chaque pixel est soigneusement placé pour captiver et inspirer, fusionnant beauté et efficacité.",
-//     videoUrls: "assets/videos/step2.mp4",
-//   },
-//   {
-//     _id: 2,
-//     title: "Consultant voyage",
-//     description:
-//       "Laissez-moi être votre guide à travers les paysages numériques. Je vous conseille sur les meilleures pratiques et je vous emmène vers des solutions innovantes.",
-//     videoUrls: "assets/videos/step1.mp4",
-//   },
-//   {
-//     _id: 3,
-//     title: "Mon passe-temps",
-//     description:
-//       "En dehors du code, je m'immerge dans la musique et les tutoriels vidéo. Chaque note et chaque leçon enrichissent mon esprit créatif et ma passion pour l'apprentissage continu.",
-//     videoUrls: "assets/videos/step41.mp4",
-//   },
-// ];
+export const stepItems = [
+  {
+    _id: 0,
+    title: "Développement web",
+    description:
+      "Plongez dans mon monde où chaque ligne de code devient une symphonie numérique. Du front-end au back-end, je façonne des expériences web fluides et innovantes.",
+    videoUrls: "assets/videos/step1.webm",
+  },
+  {
+    _id: 1,
+    title: "Design web",
+    description:
+      "Explorez mes créations où le design rencontre la fonctionnalité. Chaque pixel est soigneusement placé pour captiver et inspirer, fusionnant beauté et efficacité.",
+    videoUrls: "assets/videos/step2.mp4",
+  },
+  {
+    _id: 2,
+    title: "Consultant voyage",
+    description:
+      "Laissez-moi être votre guide à travers les paysages numériques. Je vous conseille sur les meilleures pratiques et je vous emmène vers des solutions innovantes.",
+    videoUrls: "assets/videos/step1.mp4",
+  },
+  {
+    _id: 3,
+    title: "Mon passe-temps",
+    description:
+      "En dehors du code, je m'immerge dans la musique et les tutoriels vidéo. Chaque note et chaque leçon enrichissent mon esprit créatif et ma passion pour l'apprentissage continu.",
+    videoUrls: "assets/videos/step41.mp4",
+  },
+];
 
 export const witnesses = [
   {
@@ -113,7 +112,7 @@ export const skills = [
     _id: generateID(),
     name: "HTML5",
     imgName: "images/skills/HTML5.svg",
-      //  imgUrl: "assets/images/skills/HTML5.svg",
+      imgUrl: "assets/images/skills/HTML5.svg",
     description:
       "HTML5 est le langage standard pour la création de sites web et d'applications web. Il offre une structure de base pour le contenu en ligne.",
     status: "Complète",
@@ -122,7 +121,7 @@ export const skills = [
     _id: generateID(),
     name: "Cypress",
     imgName: "images/skills/Cypress.svg",
-      //  imgUrl: "assets/images/skills/Cypress.svg",
+      imgUrl: "assets/images/skills/Cypress.svg",
     description:
       "Cypress est un framework de test automatisé pour les applications web modernes. Il permet des tests rapides, faciles et fiables.",
     status: "Complète",
@@ -131,7 +130,7 @@ export const skills = [
     _id: generateID(),
     name: "Blender",
     imgName: "images/skills/blender.svg",
-      //  imgUrl: "assets/images/skills/blender.svg",
+      imgUrl: "assets/images/skills/blender.svg",
 
     description:
       "Blender est un logiciel de modélisation, d'animation et de rendu 3D. Il est utilisé pour créer des graphiques, des animations, des jeux et plus encore.",
@@ -141,7 +140,7 @@ export const skills = [
     _id: generateID(),
     name: "Three.js",
     imgName: "images/skills/Threejs.svg",
-      //  imgUrl: "assets/images/skills/Threejs.svg",
+      imgUrl: "assets/images/skills/Threejs.svg",
 
     description:
       "Three.js est une bibliothèque JavaScript pour créer et afficher des graphiques 3D animés en temps réel dans un navigateur web.",
@@ -151,7 +150,7 @@ export const skills = [
     _id: generateID(),
     name: "TypeScript",
     imgName: "images/skills/TypeScript.svg",
-      //  imgUrl: "assets/images/skills/TypeScript.svg",
+      imgUrl: "assets/images/skills/TypeScript.svg",
 
     description:
       "TypeScript est un sur-ensemble de JavaScript qui ajoute des fonctionnalités de typage statique optionnelles. Il améliore la maintenabilité du code et la productivité.",
@@ -161,7 +160,7 @@ export const skills = [
     _id: generateID(),
     name: "Tailwind CSS",
     imgName: "images/skills/TailwindCSS.svg",
-      //  imgUrl: "assets/images/skills/TailwindCSS.svg",
+      imgUrl: "assets/images/skills/TailwindCSS.svg",
 
     description:
       "Tailwind CSS est un framework CSS utilitaire qui facilite la création de designs personnalisés avec des classes utilitaires directement dans le HTML.",
@@ -171,7 +170,7 @@ export const skills = [
     _id: generateID(),
     name: "Apache",
     imgName: "images/skills/apache.svg",
-      //  imgUrl: "assets/images/skills/apache.svg",
+      imgUrl: "assets/images/skills/apache.svg",
 
     description:
       "Apache HTTP Server est un serveur web open-source largement utilisé. Il fournit une plateforme stable pour héberger des sites web et des applications.",
@@ -181,7 +180,7 @@ export const skills = [
     _id: generateID(),
     name: "Bootstrap",
     imgName: "images/skills/bootstrap.svg",
-      //  imgUrl: "assets/images/skills/bootstrap.svg",
+      imgUrl: "assets/images/skills/bootstrap.svg",
 
     description:
       "Bootstrap est un framework front-end populaire pour le développement web responsive. Il offre des composants prêts à l'emploi et une grille flexible.",
@@ -191,7 +190,7 @@ export const skills = [
     _id: generateID(),
     name: "CSS",
     imgName: "images/skills/css.svg",
-      //  imgUrl: "assets/images/skills/css.svg",
+      imgUrl: "assets/images/skills/css.svg",
 
     description:
       "CSS (Cascading Style Sheets) est le langage utilisé pour définir la présentation visuelle des pages web. Il contrôle le style, la mise en page et l'apparence.",
@@ -201,7 +200,7 @@ export const skills = [
     _id: generateID(),
     name: "Debian",
     imgName: "images/skills/Debian.svg",
-      //  imgUrl: "assets/images/skills/Debian.svg",
+      imgUrl: "assets/images/skills/Debian.svg",
 
     description:
       "Debian est un système d'exploitation basé sur Linux, connu pour sa stabilité, sa sécurité et son large éventail de logiciels disponibles.",
@@ -211,7 +210,7 @@ export const skills = [
     _id: generateID(),
     name: "Figma",
     imgName: "images/skills/Figma.svg",
-      //  imgUrl: "assets/images/skills/Figma.svg",
+      imgUrl: "assets/images/skills/Figma.svg",
 
     description:
       "Figma est un outil de conception d'interface utilisateur basé sur le cloud. Il permet la collaboration en temps réel et la création de prototypes interactifs.",
@@ -221,7 +220,7 @@ export const skills = [
     _id: generateID(),
     name: "Firebase",
     imgName: "images/skills/Firebase.svg",
-      //  imgUrl: "assets/images/skills/Firebase.svg",
+      imgUrl: "assets/images/skills/Firebase.svg",
 
     description:
       "Firebase est une plateforme de développement d'applications mobiles et web. Elle offre des fonctionnalités telles que l'authentification, la base de données en temps réel, le stockage et plus encore.",
@@ -231,7 +230,7 @@ export const skills = [
     _id: generateID(),
     name: "Git",
     imgName: "images/skills/Git.svg",
-      //  imgUrl: "assets/images/skills/Git.svg",
+      imgUrl: "assets/images/skills/Git.svg",
 
     description:
       "Git est un système de contrôle de version distribué. Il permet de suivre les modifications du code source, de coordonner le travail d'équipe et de gérer les versions du logiciel.",
@@ -241,7 +240,7 @@ export const skills = [
     _id: generateID(),
     name: "GitHub",
     imgName: "images/skills/Github.svg",
-      //  imgUrl: "assets/images/skills/Github.svg",
+      imgUrl: "assets/images/skills/Github.svg",
     
     description:
       "GitHub est une plateforme de développement collaboratif de logiciels. Elle utilise Git pour le contrôle de version et facilite la gestion des projets, le suivi des problèmes et la collaboration.",
@@ -251,7 +250,7 @@ export const skills = [
     _id: generateID(),
     name: "JavaScript",
     imgName: "images/skills/Javascript.svg",
-      //  imgUrl: "assets/images/skills/Javascript.svg",
+      imgUrl: "assets/images/skills/Javascript.svg",
 
     description:
       "JavaScript est le langage de programmation de base pour le web. Il permet de rendre les pages web interactives et dynamiques.",
@@ -261,7 +260,7 @@ export const skills = [
     _id: generateID(),
     name: "nginx",
     imgName: "images/skills/nginx.svg",
-      //  imgUrl: "assets/images/skills/nginx.svg",
+      imgUrl: "assets/images/skills/nginx.svg",
 
     description:
       "nginx est un serveur web open-source très performant. Il est utilisé comme serveur proxy, de messagerie et de streaming, entre autres.",
@@ -271,7 +270,7 @@ export const skills = [
     _id: generateID(),
     name: "Next.js",
     imgName: "images/skills/Nextjs.svg",
-      //  imgUrl: "assets/images/skills/Nextjs.svg",
+      imgUrl: "assets/images/skills/Nextjs.svg",
 
     description:
       "Next.js est un framework React populaire pour le rendu côté serveur et le développement d'applications web modernes. Il offre des performances optimisées et des fonctionnalités avancées.",
@@ -281,7 +280,7 @@ export const skills = [
     _id: generateID(),
     name: "npm",
     imgName: "images/skills/npm.svg",
-      //  imgUrl: "assets/images/skills/npm.svg",
+      imgUrl: "assets/images/skills/npm.svg",
 
     description:
       "npm est le gestionnaire de paquets par défaut pour Node.js. Il permet d'installer, de mettre à jour et de gérer les dépendances des projets JavaScript.",
@@ -291,7 +290,7 @@ export const skills = [
     _id: generateID(),
     name: "Node.js",
     imgName: "images/skills/nodejs.svg",
-      //  imgUrl: "assets/images/skills/nodejs.svg",
+      imgUrl: "assets/images/skills/nodejs.svg",
 
     description:
       "Node.js est un environnement d'exécution JavaScript côté serveur. Il permet de développer des applications web robustes et évolutives.",
@@ -301,7 +300,7 @@ export const skills = [
     _id: generateID(),
     name: "React",
     imgName: "images/skills/react.svg",
-      //  imgUrl: "assets/images/skills/react.svg",
+      imgUrl: "assets/images/skills/react.svg",
 
     description:
       "React est une bibliothèque JavaScript pour la construction d'interfaces utilisateur interactives. Elle permet de créer des composants réutilisables et de gérer l'état de manière efficace.",
@@ -311,7 +310,7 @@ export const skills = [
     _id: generateID(),
     name: "Redux",
     imgName: "images/skills/Redux.svg",
-      //  imgUrl: "assets/images/skills/Redux.svg",
+      imgUrl: "assets/images/skills/Redux.svg",
 
     description:
       "Redux est un gestionnaire d'état prévisible pour les applications JavaScript. Il facilite la gestion des données et de l'état de l'application de manière cohérente.",
@@ -321,7 +320,7 @@ export const skills = [
     _id: generateID(),
     name: "Vercel",
     imgName: "images/skills/Vercel.svg",
-      //  imgUrl: "assets/images/skills/Vercel.svg",
+      imgUrl: "assets/images/skills/Vercel.svg",
 
     description:
       "Vercel est une plateforme de déploiement pour les applications front-end. Elle offre un déploiement simple, rapide et évolutif pour les projets web.",
@@ -331,7 +330,7 @@ export const skills = [
     _id: generateID(),
     name: "Vim",
     imgName: "images/skills/Vim.svg",
-      //  imgUrl: "assets/images/skills/Vim.svg",
+      imgUrl: "assets/images/skills/Vim.svg",
 
     description:
       "Vim est un éditeur de texte puissant, configurable et très efficace. Il est apprécié pour sa productivité et sa flexibilité.",
@@ -341,7 +340,7 @@ export const skills = [
     _id: generateID(),
     name: "Visual Studio Code",
     imgName: "images/skills/Visual-Studio-Code.svg",
-      //  imgUrl: "assets/images/skills/Visual-Studio-Code.svg",
+      imgUrl: "assets/images/skills/Visual-Studio-Code.svg",
 
     description:
       "Visual Studio Code est un éditeur de code source développé par Microsoft. Il offre une large gamme de fonctionnalités, d'extensions et de support pour différents langages.",
@@ -351,7 +350,7 @@ export const skills = [
     _id: generateID(),
     name: "Yarn",
     imgName: "images/skills/yarn.svg",
-      //  imgUrl: "assets/images/skills/yarn.svg",
+      imgUrl: "assets/images/skills/yarn.svg",
 
     description:
       "Yarn est un gestionnaire de paquets JavaScript alternatif à npm. Il améliore la fiabilité et les performances des installations de dépendances.",
@@ -471,7 +470,7 @@ export const projects = [
     Description:
       "  cette page, un tableau de bord moderne de suivi du temps, est conçu pour vous permettre de gérer efficacement et précisément vos activités quotidiennes, mensuelles et hebdomadaires. Développé en HTML, CSS et JavaScript, cette plateforme utilise IndexedDB pour sauvegarder l'historique des temps enregistrés par l'utilisateur. Vous pouvez facilement ajouter des tâches avec des heures de début et de fin, calculer la durée automatiquement, et accéder à vos données pour les modifier ou les supprimer selon vos besoins.",
     coverUrl: "assets/images/galery/timeTracking.jpg",
-    demoVideoUrl: "assets/videos/timeTracking.jpg",
+    demoVideoUrl: "assets/videos/timeTracking.webm",
     SourceCode: "https:// github.io",
   },
   {
@@ -491,7 +490,7 @@ export const projects = [
     Description:
       "la page d'accueil de Loopstudios, conçue pour présenter notre studio créatif avec élégance et simplicité. Cette page responsive est développée en utilisant HTML, CSS et JavaScript, offrant une expérience utilisateur fluide sur tous les appareils.",
     coverUrl: "assets/images/galery/loopstudios.jpg",
-    demoVideoUrl: "assets/videos/timeTracking.jpg",
+    // demoVideoUrl: "assets/videos/timeTracking.jpg",
     SourceCode: "https:// github.io",
   },
   {
@@ -532,7 +531,7 @@ export const projects = [
     Description:
       " Jstore, ume destination en ligne pour découvrir et acheter une large gamme de produits. ce site e-commerce utilise les technologies les plus avancées pour  offrir une expérience d'achat sécurisée et intuitive.",
     coverUrl: "assets/images/galery/Todo.jpg",
-    demoVideoUrl: "assets/videos/alldocs.webm",
+    // demoVideoUrl: "assets/videos/alldocs.webm",
     SourceCode: "https:// github.io",
   },
   {
@@ -542,7 +541,7 @@ export const projects = [
     stack: "RTB",
     librarys: "Slugify, indexDB",
     typeOFpreoject: "For Pratice",
-    Authors: "NAnnonyme",
+    Authors: "Annonyme",
     Demo: "https:// facebook.com",
     functionality: [
       {"Ajout de vidéos ":" Uploadez facilement de nouveaux contenus vidéo sur la plateforme."},
@@ -556,7 +555,7 @@ export const projects = [
     Description:
       " Site de streaming vidéo, développé avec les technologies modernes telles que React, TypeScript, Bootstrap, Redux et IndexedDB. Notre plateforme vous offre une expérience fluide et sécurisée pour regarder et gérer vos vidéos préférées en ligne.",
     coverUrl: "assets/images/galery/productEcom.jpg",
-    demoVideoUrl: "assets/videos/timeTracking.jpg",
+    // demoVideoUrl: "assets/videos/timeTracking.jpg",
     SourceCode: "https:// github.io",
   },
   {
@@ -567,7 +566,7 @@ export const projects = [
     librarys: "Drag an Drop , IndexDB and Localstorage",
     typeOFpreoject: "For Pratice",
     Authors: "Anonyme",
-    Demo: "https:// facebook.com",
+    Demo: "https://ogisidore.github.io/todo/",
     functionality: [
       {"Ajout de tâches ":" Ajoutez facilement des tâches à accomplir avec des détails supplémentaires si nécessaire."},
 {"Modification et suppression ":" Modifiez le contenu des tâches existantes ou supprimez-les selon vos besoins."},
@@ -579,14 +578,14 @@ export const projects = [
       "Cette application est conçue pour simplifier la gestion de vos tâches quotidiennes tout en offrant une interface utilisateur moderne et réactive.",
     Description:
       " notre application de liste de tâches, développée en utilisant React avec Bootstrap, TypeScript et IndexedDB. Cette application moderne vous permet de gérer efficacement vos tâches quotidiennes avec style et simplicité.",
-    coverUrl: "assets/images/galery/Todo.jpg",
-    demoVideoUrl: "assets/videos/ballanceDarshboard.jpg",
-    SourceCode: "https:// github.io",
+    coverUrl: "assets/images/galery/todo.png",
+    demoVideoUrl: "assets/videos/todoJs.webm",
+    SourceCode: "https://github.io//OGisidore/todo",
   },
   {
     _id: generateID(),
     projectTitle: " Product Page ",
-    technologies: "HTML , CSS , JS , IndexDB  ",
+    technologies: "HTML , CSS , JS   ",
     stack: "HCJ",
     librarys: "Drag an Drop , IndexDB and Localstorage",
     typeOFpreoject: "For Pratice",
@@ -602,18 +601,18 @@ export const projects = [
     Description:
       "Page de présentation de produits, conçu pour vous permettre d'explorer et d'interagir avec nos produits de manière interactive. Cette page pratique est développé en utilisant HTML, CSS et JavaScript, mettant en avant les fonctionnalités d'ajout au panier et de suppression du panier pour une expérience utilisateur enrichissante.",
     coverUrl: "assets/images/galery/productEcom.jpg",
-    demoVideoUrl: "assets/videos/timeTracking.jpg",
+    // demoVideoUrl: "assets/videos/timeTracking.jpg",
     SourceCode: "https:// github.io",
   },
   {
     _id: generateID(),
-    projectTitle: "crowfund landing page  ",
-    technologies: "HTML , CSS , JS ,  ",
+    projectTitle: "Boulangerie artisanal  ",
+    technologies: "HTML , CSS ,  ",
     stack: "HCJ",
     librarys: "",
-    typeOFpreoject: "Challenge",
+    typeOFpreoject: "Mes debuts",
     Authors: "Anonyme",
-    Demo: "https:// facebook.com",
+    Demo: "https://ogisidore.github.io/mudeyBreads/#breads",
     functionality: [
      
     ],
@@ -621,23 +620,23 @@ export const projects = [
     conclusion:
       "Ce site est conçu pour être simple et pratique, offrant aux utilisateurs une expérience intuitive pour explorer nos produits et gérer leur sélection facilement.",
     Description:
-      "page de crowdfunding, conçue avec passion et dévouement pour soutenir notre projet ambitieux. Cette page est le fruit de notre travail en HTML, CSS et JavaScript, offrant une expérience utilisateur immersive et engageante.",
-    coverUrl: "assets/images/galery/crowfund.jpg",
-    demoVideoUrl: "assets/videos/timeTracking.jpg",
-    SourceCode: "https:// github.io",
+      "page de de boulangerie, conçue avec passion et dévouement pour soutenir notre projet ambitieux. Cette page est le fruit de notre travail en HTML, CSS et JavaScript, offrant une expérience utilisateur immersive et engageante.",
+    coverUrl: "assets/images/galery/mudey.png",
+    demoVideoUrl: "assets/videos/mudey.webm",
+    SourceCode: "https://ogisidore.github.io/mudeyBreads",
   },
 ];
 
-let result = []
+// let result = []
 
-console.log(result);
-export const stepItems = result
+// console.log(result);
+// // export const stepItems = result
 
-console.log(stepItems);
+// console.log(stepItems);
 
 
-skills.forEach((skill)=>{
-  skill.imgUrl = loadFiles(skill.imgName)
-  console.log(skill.imgUrl);
-})
+// skills.forEach((skill)=>{
+//   skill.imgUrl = loadFiles(skill.imgName)
+//   console.log(skill.imgUrl);
+// })
 

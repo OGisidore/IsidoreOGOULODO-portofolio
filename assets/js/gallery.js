@@ -1,4 +1,5 @@
 import { projects } from "./data.js"
+import { displayHeader } from "./geneics.js"
 
 
 
@@ -9,6 +10,7 @@ let currentData = [...projects]
 const filters = document.querySelector("#filter")
 
 window.onload = ()=>{
+  displayHeader()
 
 
     const closeModal = ()=>{
@@ -23,7 +25,11 @@ window.onload = ()=>{
           <div> <img src="assets/images/galery/icon-close.svg" alt="close-icon" class="close"> </div>
             <div class="informations">
                 <div class="illustrationVideo">
-                    <video src="assets/videos/alldocs.webm" muted autoplay></video>
+                ${currentElement.demoVideoUrl ? `<video src=${currentElement.demoVideoUrl} muted autoplay></video>` : ` <img
+                src="${currentElement.coverUrl}"
+                alt="${currentElement.projectTitle}"
+              />` }
+                    
                     <div class="title">
                       Name : ${currentElement.projectTitle}
                     </div>
