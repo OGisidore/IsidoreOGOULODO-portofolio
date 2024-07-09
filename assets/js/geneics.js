@@ -60,23 +60,20 @@ const closeContactForm = ()=>{
   });
 
   function highlightWords(quill) {
-    const text = quill.getText(); // Get the text from the editor
-    const words = text.split(/\s+/); // Split the text into words
+    const text = quill.getText(); 
+    const words = text.split(/\s+/); 
     let index = 0;
 
     words.forEach(word => {
       const length = word.length;
-      // Remove the highlight from all words
       quill.formatText(index, length, {'color': ''}, 'silent');
-      if (word === 'projet') {
-        // Apply the highlight to the word 'projet'
+      if (word.toLowerCase() === 'projet' || word.toLowerCase() === 'project') {
         quill.formatText(index, length, {'color': 'green', 'bold' : true}, 'silent');
       }
       if (word.toLowerCase() === 'error'|| word.toLowerCase() === 'erreur') {
-        // Apply the highlight to the word 'projet'
         quill.formatText(index, length, {'color': 'red', 'bold' : true}, 'silent');
       }
-      index += length + 1; // +1 for the space
+      index += length + 1; 
     });
   }
 

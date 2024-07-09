@@ -188,7 +188,7 @@ html {
           margin-right: 5rem;
         }
         .contactForm{
-          position: absolute;
+          position: fixed;
           width: 100%;
           height: 100vh;
           z-index: 100;
