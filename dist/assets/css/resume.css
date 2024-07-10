@@ -9,6 +9,9 @@ html {
         pointer-events: none;
         .header {
           pointer-events: visible !important;
+          #contact{
+            /* pointer-events: all; */
+          }
         }
         .resume {
           /* border: 1rem solid; */
@@ -58,6 +61,14 @@ html {
           
         }
       }
+      /* .contactForm{
+        .contact{
+          #contact{
+            user-select: none;
+            z-index: 100;
+          }
+        }
+      } */
 
       .animated-button {
         position: absolute;
