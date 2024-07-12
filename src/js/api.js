@@ -1,6 +1,6 @@
 import { addDoc, collection, getDocs, onSnapshot } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
-import { storage } from "./firestore.js";
+import { db, storage } from "./firestore.js";
 
 export const addToFirestore = async (entityName, data)=>{
     try {
@@ -28,9 +28,9 @@ export const getAllData = async (entityName)=>{
     }
     
 }
-const ListenToAdDoc = ()=>{
-    onSnapshot(specialOffer)
-}
+// const ListenToAdDoc = ()=>{
+//     onSnapshot(specialOffer)
+// }
 
 export const getMediaUrlFromFirebaseStorage  = async(path)=>{
     const dataRef = ref(storage, path )
@@ -43,3 +43,11 @@ export const getMediaUrlFromFirebaseStorage  = async(path)=>{
     }
 
 }
+
+getAllData("Essais")
+// getMediaUrlFromFirebaseStorage()
+addToFirestore("Essais", {
+    name : "Isidore",
+    Age : 23,
+    Proffession : "agent de voyage"
+})
