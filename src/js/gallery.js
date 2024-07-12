@@ -8,6 +8,8 @@ let projectsPerPage = 6
 let currentIndex = 0
 let currentData = [...projects]
 const filters = document.querySelector("#filter")
+const next = document.querySelector(".next");
+const previous = document.querySelector(".previous");
 
 window.onload = ()=>{
   displayHeader()
@@ -94,7 +96,7 @@ window.onload = ()=>{
         }
         if (data.length > projectsPerPage) {
           for (let i = 0; i < projectsPerPage; i++) {
-            const itemIndex = (currentIndex + i) % data.length;
+            const itemIndex = currentIndex + i
             const project = data[itemIndex]
             gallery.innerHTML += `
             <div class="project">
@@ -157,6 +159,15 @@ window.onload = ()=>{
 
 
     filters.onchange = handleFilterchange
+    next.onclick = () => {
+      currentIndex = (currentIndex + projectsPerPage) % currentData.length;
+      displayGalery();
+    };
+    previous.onclick = () => {
+      currentIndex =
+        (currentIndex - projectsPerPage + currentData.length) % currentData.length;
+      displayGalery();
+    };
     
 
     

@@ -57,7 +57,7 @@ const closeContactForm = ()=>{
     modules: {
       toolbar: true,
     },
-    placeholder: 'Compose an epic...',
+    placeholder: 'Hello Isidore ...',
     theme: 'snow'
   };
   const quill = new Quill('#editor', options);
@@ -112,7 +112,6 @@ const closeContactForm = ()=>{
                   </div>
                 </div>`
         const contactBtn =   document.querySelector("#contact")
-        console.log(contactBtn);
         contactBtn.onclick = displayContactForm
           
 }

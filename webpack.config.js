@@ -10,7 +10,8 @@ module.exports = {
     utilities : "./src/js/utilities.js",
     certificate:'./src/js/certificate.js',
     api : './src/js/api',
-    geneics : './src/js/geneics.js'
+    geneics : './src/js/geneics.js',
+    firestore : './src/js/firestore.js'
   },
   output: {
     filename: '[name].bundle.js',

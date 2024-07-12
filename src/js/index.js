@@ -63,7 +63,7 @@ displayStep()
       if (step.dataset.id === curentStep.toString()) {
         step.classList.add("active");
         step.style.minHeigth = 5 + "rem";
-        step.style.transition = 3 + "s";
+        step.style.transition = 0.3 + "s";
       } else {
         step.classList.remove("active");
       }

@@ -1,21 +1,45 @@
-// import { collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js';
-// import { db } from "./firestore.js"
+import { addDoc, collection, getDocs, onSnapshot } from "firebase/firestore";
+import { getDownloadURL, ref } from "firebase/storage";
+import { storage } from "./firestore.js";
 
-// export const addToFirestore = async (entityName, data)=>{
-//     try {
-//         const collectionning = collection(db, entityName)
-//         await addDoc(collectionning,data)
-//         console.log("Toutes les compétences ont été ajoutées à Firestore.");
+export const addToFirestore = async (entityName, data)=>{
+    try {
+        const collectionning = collection(db, entityName)
+        await addDoc(collectionning,data)
+        console.log("Toutes les donnees ont été ajoutées à Firestore.");
 
-//     } catch (error) {
-//         console.error("Erreur lors de l'ajout des compétences : ", error);
+    } catch (error) {
+        console.error("Erreur lors de l'ajout des donnees : ", error);
 
-//     }
-// }
+    }
+}
 
-// export const getAllData = async (entityName)=>{
-//     const collectionData = collection(db , entityName)
-//     const dataSnapshot = await getDocs(collectionData)
-//     const dataList = dataSnapshot.docs.map(doc => doc.data())
-//     return dataList
-// }
+export const getAllData = async (entityName)=>{
+    try {
+        const collectionData = collection(db , entityName)
+    const dataSnapshot = await getDocs(collectionData)
+    if (dataSnapshot.exists()) {
+        var docData = dataSnapshot.docs()
+        console.log("my data is :", docData );
+        
+    }
+    } catch (error) {
+        console.error("Erreur lors de l'ajout de la recuperation des donnees : ", error);      
+    }
+    
+}
+const ListenToAdDoc = ()=>{
+    onSnapshot(specialOffer)
+}
+
+export const getMediaUrlFromFirebaseStorage  = async(path)=>{
+    const dataRef = ref(storage, path )
+    try {
+        return await getDownloadURL(dataRef)
+        
+    } catch (error) {
+        console.error("error erreur lors de la recuperation de l'url : " , error);
+        
+    }
+
+}
