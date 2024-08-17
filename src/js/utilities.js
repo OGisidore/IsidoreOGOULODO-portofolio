@@ -4,3 +4,4 @@ export const generateID = ()=>{
       return (Math.random()*16 | 0 ).toString(16)
     }).toLowerCase();
   }
+  console.clear()

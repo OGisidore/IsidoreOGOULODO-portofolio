@@ -334,6 +334,7 @@ html {
           }
         }
       }
+      
       .about,
       .gallery,
       .resume {
@@ -345,6 +346,7 @@ html {
       .contact {
         padding: 0.5rem !important;
       }
+      
     }
   }
 }

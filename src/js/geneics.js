@@ -132,3 +132,4 @@ const closeContactForm = ()=>{
 // const contactBtn =   document.querySelector("#contact")
 // contactBtn ? contactBtn.onclick = displayContactForm : null;
 
+console.clear()

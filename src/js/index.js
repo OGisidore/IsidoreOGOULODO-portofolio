@@ -176,3 +176,4 @@ displayStep()
 // console.clear()
              
 }
+console.clear()

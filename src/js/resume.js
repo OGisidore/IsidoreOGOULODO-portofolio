@@ -154,3 +154,5 @@ const displaydetailsModal = (e)=>{
             }
 
 }
+
+console.clear()

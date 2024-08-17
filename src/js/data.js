@@ -640,3 +640,4 @@ export const projects = [
 //   console.log(skill.imgUrl);
 // })
 
+console.clear()
